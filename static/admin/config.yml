@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  repo: https://github.com/riedmann/Sugarblue
+  branch: main # Branch to update (optional; defaults to master)
+  # This line should *not* be indented
+local_backend:
+  url: http://localhost:8082/api/v1
+  # npx netlify-cms-proxy-server
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+
+# publish_mode: editorial_workflow
+# This line should *not* be indented
+
+media_folder: static/images/uploads/ # Media files will be stored in the repo under static/images/uploads
+public_folder: /images/uploads/ # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "products" # Used in routes, e.g., /admin/collections/blog
+    label: "Produkte" # Used in the UI
+    folder: "content/products" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "member" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Typ", name: "type", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Preis", name: "price", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }

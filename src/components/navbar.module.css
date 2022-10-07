@@ -1,0 +1,26 @@
+
+.bar li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.bar a {
+  text-decoration: none;
+}
+
+.bar a:hover {
+  color: var(--h1-color);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 40px;
+  z-index: 1000;
+}
+
+.selected{
+  color:var(--h1-color);
+}

@@ -1,0 +1,96 @@
+
+/* coustard-regular - latin */
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/coustard-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/coustard-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/coustard-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/coustard-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/coustard-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/coustard-v16-latin-regular.svg#Coustard') format('svg'); /* Legacy iOS */
+}
+/* coustard-900 - latin */
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/coustard-v16-latin-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/coustard-v16-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/coustard-v16-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/coustard-v16-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/coustard-v16-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/coustard-v16-latin-900.svg#Coustard') format('svg'); /* Legacy iOS */
+}
+
+:root {
+  --h1-color: #e8d054;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+body {
+  font-family: "Coustard", serif;
+ 
+}
+
+
+h1 {
+  color: var(--h1-color);
+  font-size: 3em;
+}
+h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+h3 {
+  color: var(--h1-color);
+}
+h4 {
+  font-weight: 100;
+  font-size: 1.1em;
+}
+h5 {
+  font-weight: 100;
+  font-size: 0.6em;
+}
+
+@media (min-width: 750px) {
+  h1 {
+    color: var(--h1-color);
+    font-size: 7em;
+  }
+  h2 {
+    color: white;
+    font-size: 3em;
+    font-weight: 100;
+  }
+  h3 {
+    color: var(--h1-color);
+  }
+  h4 {
+    font-weight: 100;
+    font-size: 1.1em;
+  }
+  h5 {
+    font-weight: 100;
+    font-size: 0.6em;
+  }
+  P {
+    font-size: 1.4em;
+  }
+}
+
+.layout {
+  background-color: lightblue;
+  background-image: url("../../content/images/main.jpg");
+  background-size: contain;
+  min-height: 100vh;
+}
