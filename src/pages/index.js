@@ -1,14 +1,10 @@
-import React from "react"
-import Navbar from "../components/navbar"
-import * as styles from "./index.module.css"
-import { StaticImage } from "gatsby-plugin-image"
-import Products from "./products"
+import React from "react";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <div >
-      <h1>Hellop</h1>
-      <Products/>
-    </div>
-  )
+    <Layout>
+      <h1>Home</h1>
+    </Layout>
+  );
 }

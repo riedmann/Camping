@@ -13,7 +13,7 @@ export default function Navbar() {
             <Link to="/" activeClassName={styles.selected}>Home</Link>
           </li>
           <li>
-            <Link to="/band" activeClassName={styles.selected}>Band</Link>
+            <Link to="/products" activeClassName={styles.selected}>Products</Link>
           </li>
 
           <li>

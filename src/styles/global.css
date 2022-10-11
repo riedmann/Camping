@@ -88,9 +88,3 @@ h5 {
   }
 }
 
-.layout {
-  background-color: lightblue;
-  background-image: url("../../content/images/main.jpg");
-  background-size: contain;
-  min-height: 100vh;
-}

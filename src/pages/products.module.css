@@ -1,0 +1,17 @@
+.cards {
+  display: grid;
+  grid-gap: 10px;
+  
+}
+
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, 20em);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, 20em);
+  }
+}
