@@ -1,8 +1,8 @@
 ---
 layout: member
-name: Test
-category: Hauptspeise
+name: Spaghetti
+category: Pizza
 image: /images/uploads/f1.webp
-price: 44
+price: 11
 ---
-f﻿dafd
+4﻿44

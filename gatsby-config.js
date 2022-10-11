@@ -7,7 +7,13 @@
  module.exports = {
   /* Your site config here */
   plugins: [
-    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static`,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -16,13 +22,7 @@
         path: `${__dirname}/content`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/static`,
-      },
-    },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
