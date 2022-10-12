@@ -12,9 +12,12 @@ export default function CartList() {
     <div>
       {hasData ? (
         state.products.map((product) => (
-           <h2>{product.name}</h2>
-        )
-      )) : (
+          <div>
+            <h2>{product.name}</h2>
+            <h4>{product.price}</h4>
+          </div>
+        ))
+      ) : (
         <div>nothing</div>
       )}
     </div>

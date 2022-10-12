@@ -18,13 +18,13 @@ export default function Card(props) {
       onKeyDown={cardClicked}
       role="presentation"
     >
-      <div>
-        <img src={data.image} width="100%" alt="food"></img>
+      <div className={styles.imageContainer} style={{backgroundImage:"url('"+ data.image +"')", backgroundSize:"cover"}}>
+        
       </div>
       <div className={styles.description}>
-        <h1>{data.title}</h1>
-        <h2>{data.category}</h2>
-        <h3>{data.price}</h3>
+        <h2>{data.name}</h2>
+        <h3>{data.category}</h3>
+        <h4>{data.price}</h4>
       </div>
     </div>
   );
