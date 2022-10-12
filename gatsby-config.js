@@ -4,17 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
- module.exports = {
+module.exports = {
   /* Your site config here */
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/static`,
-      },
-    },
-    `gatsby-plugin-image`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,7 +15,7 @@
         path: `${__dirname}/content`,
       },
     },
-    
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,22 +23,15 @@
         path: `${__dirname}/src`,
       },
     },
+    `gatsby-plugin-netlify-cms-paths`,
+
+    // Including in your Remark plugins will transform any paths in your markdown body
+    
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              // [Optional] The root of "media_folder" in your config.yml
-              // Defaults to "static"
-              staticFolderName: 'static',
-              // [Optional] Include the following fields, use dot notation for nested fields
-              // All fields are included by default
-             
-            },
-          },
-          
+
           {
             resolve: "gatsby-remark-external-links",
             options: {
@@ -62,10 +48,10 @@
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    
+    
   ],
   siteMetadata: {
     title: "andreasFs",
   },
-}
+};

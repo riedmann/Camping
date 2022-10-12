@@ -1,4 +1,4 @@
-import { GatsbyImage } from "gatsby-plugin-image"
+
 import React, { useContext } from "react"
 import { GlobalDispachContext } from "../context/GlobalContextProvider";
 import * as styles from "./card.module.css"
@@ -8,6 +8,7 @@ export default function Card(props) {
   //const state = useContext(GlobalStateContext);
   const dispatch = useContext(GlobalDispachContext);
  
+
   let data = props.data.node.frontmatter;
   const cardClicked = ()=>{
     dispatch({type:"ADD_PRODUCT", value:data})
@@ -15,17 +16,9 @@ export default function Card(props) {
   return (
     <div className={styles.card} onClick={cardClicked} onKeyDown={cardClicked}  role='presentation'>
       <div>
+        <img src={data.image} width="100%" alt="food"></img>
         
-        <GatsbyImage
-          image={data.image.childImageSharp.gatsbyImageData}
-          alt="Image of Card"
-          
-          style={{
-            borderTopRightRadius: "15px",
-            borderTopLeftRadius: "15px",
-            
-          }}
-        />
+        
       </div>
       <div className={styles.description}>
         <h1>{data.title}</h1>

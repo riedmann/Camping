@@ -32,15 +32,7 @@ export const query = graphql`
             name
             price
             category
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
+            image 
           }
         }
       }
