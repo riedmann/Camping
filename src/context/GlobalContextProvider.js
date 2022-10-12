@@ -1,39 +1,41 @@
-import React, { createContext, useReducer } from "react";
+import React from "react"
 
-export const GlobalStateContext = createContext();
-export const GlobalDispachContext = createContext();
+export const GlobalStateContext = React.createContext()
+export const GlobalDispachContext = React.createContext()
 
 const initialState = {
-  products: [],
-  name: "hans",
-};
+  theme: "light",
+  products:[]
+}
+
 function reducer(state, action) {
   switch (action.type) {
-    case "CHANGE_NAME":
+    case "TOGGLE_THEME": {
       return {
         ...state,
-        name: action.value,
-      };
-    case "ADD_PRODUCT":
+        theme: state.theme === "light" ? "dark" : "light",
+      }
+    }
+    case "ADD_PRODUCT":{
       return {
         ...state,
-        products: state.products.concat(action.value),
-      };
-
+        products: state.products.concat(action.value)
+      }
+    }
     default:
-      break;
+      throw new Error("Bad Action Type")
   }
 }
 
-export default function GlobalContextProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
-
+const GlobalContextProvider = ({ children }) => {
+  const [state, dispach] = React.useReducer(reducer, initialState)
   return (
     <GlobalStateContext.Provider value={state}>
-      <GlobalDispachContext.Provider value={dispatch}>
+      <GlobalDispachContext.Provider value={dispach}>
         {children}
       </GlobalDispachContext.Provider>
     </GlobalStateContext.Provider>
-  );
+  )
 }
+
+export default GlobalContextProvider
