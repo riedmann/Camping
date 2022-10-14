@@ -3,6 +3,4 @@ node_modules
 public
 # Local Netlify folder
 .netlify
-sendgrid.env
-sendgrid.env
-sendgrid.env
+.env
