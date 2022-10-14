@@ -1,11 +1,16 @@
+//netlify functions:invoke send-contact-email --no-identity
+require('dotenv').config()
 const sgMail = require("@sendgrid/mail");
 
 exports.handler = async function (event, context, callback) {
-  let key = "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";
-  console.log("inside: " + event);
-  //const { message, senderEmail, senderName } = JSON.parse(event.body);
+
+  let key = process.env.SENDGRID_API_KEY;
   sgMail.setApiKey(key);
   console.log(key);
+  return {
+    statusCode:200,
+    body:"Done"
+  };
   const msg = {
     to: "andreas.riedmann@gmail.com", // Change to your recipient
     from: "andreas.riedmann@riedmann.rocks", // Change to your verified sender
