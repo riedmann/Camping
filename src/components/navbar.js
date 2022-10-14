@@ -20,7 +20,7 @@ export default function Navbar() {
             <Link to="/cart" activeClassName={styles.selected}>Warenkorb</Link>
           </li>
           <li>
-            <Link to="/sound" activeClassName={styles.selected}>Sound</Link>
+            <Link to="/form" activeClassName={styles.selected}>Fromular</Link>
           </li>
           <li>
             <Link to="/about" activeClassName={styles.selected}>Info</Link>
