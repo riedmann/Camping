@@ -17,9 +17,19 @@ function reducer(state, action) {
       }
     }
     case "ADD_PRODUCT":{
+      let products = state.products;
+      let foundProd = products.find(prod => (prod.name===action.value.name));
+      if (foundProd){
+        foundProd.amount += 1;
+      } else {
+        action.value.amount = 1;
+        products.push(action.value);
+      }
+        
+
       return {
         ...state,
-        products: state.products.concat(action.value)
+        products: products
       }
     }
     default:

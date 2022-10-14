@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalStateContext } from "../context/GlobalContextProvider";
+import CartItem from "./cartItem";
 
 export default function CartList() {
   const state = useContext(GlobalStateContext);
@@ -8,18 +9,24 @@ export default function CartList() {
   if (!state) {
     hasData = false;
   }
+
+  const getSumOfProducts = () => {
+    let sum = 0;
+    state.products.forEach((element) => {
+      sum += element.price * element.amount;
+    });
+    return sum;
+  };
   return (
     <div>
       {hasData ? (
         state.products.map((product) => (
-          <div>
-            <h2>{product.name}</h2>
-            <h4>{product.price}</h4>
-          </div>
+          <CartItem product={product}/>
         ))
       ) : (
         <div>nothing</div>
       )}
+      <h3>Summe: {getSumOfProducts()}</h3>
     </div>
   );
 }
