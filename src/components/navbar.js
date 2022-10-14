@@ -17,7 +17,7 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link to="/images" activeClassName={styles.selected}>Bilder</Link>
+            <Link to="/cart" activeClassName={styles.selected}>Warenkorb</Link>
           </li>
           <li>
             <Link to="/sound" activeClassName={styles.selected}>Sound</Link>

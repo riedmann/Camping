@@ -19,11 +19,19 @@
 
 .description {
   background-color: rgba(0, 0, 0, 0.926);
-  padding: 20px;
+  padding: 40px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   
 }
 .description h5 {
   margin-top: 10px;
+}
+
+.image{
+  height: 100%;
+}
+
+.imageContainer{
+  height: 400px ;
 }

@@ -25,7 +25,7 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms-paths`,
 
-    // Including in your Remark plugins will transform any paths in your markdown body
+ 
     
     {
       resolve: `gatsby-transformer-remark`,
@@ -52,6 +52,6 @@ module.exports = {
     
   ],
   siteMetadata: {
-    title: "andreasFs",
+    title: "Camping Dornbirn, Food",
   },
 };
