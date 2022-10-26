@@ -24,7 +24,7 @@ export default function Card(props) {
       <div className={styles.description}>
         <h2>{data.name}</h2>
         <h3>{data.category}</h3>
-        <h4>{data.price}</h4>
+        <h4>{data.price} €</h4>
       </div>
     </div>
   );

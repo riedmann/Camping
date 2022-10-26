@@ -22,10 +22,15 @@
   padding: 40px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  line-height: 1.5em;
   
 }
 .description h5 {
   margin-top: 10px;
+}
+
+.description h2{
+  font-size: 1.4em;
 }
 
 .image{
