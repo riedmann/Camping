@@ -1,16 +1,15 @@
 import { graphql } from "gatsby";
 import React, { useState } from "react";
 import Card from "../components/card";
+import CartList from "../components/cartlist";
 import Layout from "../components/layout";
 import * as styles from "./products.module.css";
 
 export default function Products({ data }) {
-  const [search, setSearch] = useState("Creme");
+  const [search, setSearch] = useState("");
   const prods = data.allMarkdownRemark.edges;
 
   var filteredProds = prods.filter(function (el) {
-    let res = el.node.frontmatter.name.search(search);
-
     return (
       el.node.frontmatter.name.search(search) >= 0 ||
       el.node.frontmatter.category.search(search) >= 0 ||
@@ -25,7 +24,7 @@ export default function Products({ data }) {
   let id = 0;
   return (
     <Layout>
-      <div>
+      <div className={styles.filter}>
         <input
           style={{ color: "black" }}
           type="text"
@@ -33,11 +32,16 @@ export default function Products({ data }) {
           onChange={onChangeHandler}
         ></input>
       </div>
-      <div className={styles.cards}>
-        {filteredProds.map((product) => {
-          id++;
-          return <Card data={product} key={id} />;
-        })}
+      <div className={styles.prods}>
+        <div className={styles.cards}>
+          {filteredProds.map((product) => {
+            id++;
+            return <Card data={product} key={id} />;
+          })}
+        </div>
+        <div className={styles.list}>
+          <CartList/> 
+        </div>
       </div>
     </Layout>
   );

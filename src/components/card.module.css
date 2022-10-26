@@ -6,15 +6,17 @@
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-color: grey;
+
   line-height: 1.2em;
   color:white;
   height:100%;
+  border-color:white;
+  border-width: 1px;
 }
 
 .card:hover{
   border-color:white;
-  border-width: 1px;
+  border-width: 2px;
 }
 
 .description {
@@ -38,5 +40,7 @@
 }
 
 .imageContainer{
-  height: 400px ;
+  height: 300px ;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }

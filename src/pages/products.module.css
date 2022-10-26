@@ -1,7 +1,24 @@
 .cards {
   display: grid;
   grid-gap: 10px;
+  width:100%;
   
+}
+.list{
+  width:20vw;
+}
+
+.filter{
+  margin-bottom: 30px;
+}
+
+.filter input{
+  padding: 20px;
+}
+
+.prods{
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 600px) {
