@@ -18,7 +18,7 @@ export default function CartList() {
     return sum;
   };
   return (
-    <div>
+    <div style={{"marginTop":"220px"}}>
       {hasData ? (
         state.products.map((product) => (
           <CartItem product={product}/>

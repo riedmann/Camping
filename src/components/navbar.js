@@ -13,8 +13,15 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarLine}>
-        <div><img src="./images/logo.svg"/></div>
-        <div className={styles.text}>Jetzt <span className={styles.bold}>bestellen</span>, später <span className={styles.bold}>abholen</span></div>
+        <div>
+          <Link to="/">
+            <img src="./images/logo.svg" />
+          </Link>
+        </div>
+        <div className={styles.text}>
+          Jetzt <span className={styles.bold}>bestellen</span>, später{" "}
+          <span className={styles.bold}>abholen</span>
+        </div>
       </div>
       <div className={styles.navbarLine1}>
         <input type="text" onChange={changeSearch} placeholder="Suche" />
@@ -22,6 +29,5 @@ export default function Navbar() {
         <Marker />
       </div>
     </div>
-    
   );
 }

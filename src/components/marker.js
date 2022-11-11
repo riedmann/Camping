@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useContext } from "react";
 import { GlobalStateContext } from "../context/GlobalContextProvider";
 
@@ -13,8 +14,10 @@ export default function Marker() {
     });
     return sum;
   };
+
   return (
     <div className={styles.marker}>
+      <Link to="cart">Cart</Link>
       <div className={styles.title}>Warenkorb</div>
       <h3> {getSumOfProducts()}</h3>
      
