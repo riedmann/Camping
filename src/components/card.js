@@ -12,8 +12,7 @@ export default function Card(props) {
     dispach({ type: "ADD_PRODUCT", value: data });
   };
   return (
-    <div
-      className={styles.card}>
+    <div className={styles.card}>
       <div
         className={styles.imageContainer}
         style={{
@@ -23,18 +22,21 @@ export default function Card(props) {
       ></div>
       <div className={styles.description}>
         <div className={styles.info}>
-          <h2>{data.category}</h2>
-          <h3 className={styles.marginTop}>{data.name}</h3>
-          <p className={styles.detail}>{data.description}</p>
-        </div>
-        <div className={styles.priceCart}>
-          <div>{data.price} €</div>
-          <div className={styles.icon} onClick={cardClicked}>
-            <BsFillCartPlusFill
-              onMouseOver={({ target }) => (target.style.color = "grey")}
-              onMouseOut={({ target }) => (target.style.color = "black")}
-            />
+          <div>
+            <h2>{data.category}</h2>
+            <h3 className={styles.marginTop}>{data.name}</h3>‚  
           </div>
+
+          <div className={styles.priceCart}>
+            <div>{data.price} €</div>
+            <div className={styles.icon} onClick={cardClicked}>
+              <BsFillCartPlusFill
+                onMouseOver={({ target }) => (target.style.color = "grey")}
+                onMouseOut={({ target }) => (target.style.color = "black")}
+              />
+            </div>
+          </div>
+          {/* <p className={styles.detail}>{data.description}</p> */}
         </div>
       </div>
     </div>

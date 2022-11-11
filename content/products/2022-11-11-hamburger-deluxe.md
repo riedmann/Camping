@@ -1,6 +1,6 @@
 ---
 layout: member
-name: HAmburger Deluxe
+name: Hamburger Deluxe
 category: Hauptspeise
 image: /images/uploads/f2.jpeg
 price: 22

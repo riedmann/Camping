@@ -10,7 +10,7 @@ export default function Layout({ children }) {
     
       <div className={styles.layout}>
         <Navbar />
-        <Marker/>
+        
         <div className={styles.content}>{children}</div>
         <footer>
           <p>Copyright ran</p>

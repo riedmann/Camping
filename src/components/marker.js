@@ -15,6 +15,7 @@ export default function Marker() {
   };
   return (
     <div className={styles.marker}>
+      <div className={styles.title}>Warenkorb</div>
       <h3> {getSumOfProducts()}</h3>
      
     </div>

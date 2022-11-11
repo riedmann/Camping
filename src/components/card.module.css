@@ -6,22 +6,15 @@
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-
   line-height: 1.2em;
   color: black;
   border-color: rgb(68, 68, 68);
   border-width: 1px;
 }
 
-/* .card:hover {
-  border-color: rgb(55, 166, 43);
-  -webkit-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
-} */
 
 .description {
-  height: 350px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,10 +56,20 @@
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
-  font-weight: 900;
-  font-size: 2em;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+.icon {
+  color:grey;
+}
+.icon:hover {
+  color: black;
 }
 
-.icon:hover {
-  color: grey;
+.info{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
