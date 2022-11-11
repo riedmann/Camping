@@ -26,5 +26,6 @@ collections:
       - { label: "Kategorie", name: "category", widget: "select", options: ["Hauptspeise", "Pizza", "Nachspeise"]}
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Preis", name: "price", widget: "number" }
+      - { label: "Beschreibung", name: "description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
  

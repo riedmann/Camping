@@ -60,6 +60,7 @@ export const query = graphql`
             name
             price
             category
+            description
             image
           }
         }

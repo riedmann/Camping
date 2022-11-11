@@ -22,8 +22,9 @@ export default function Card(props) {
         
       </div>
       <div className={styles.description}>
-        <h2>{data.name}</h2>
-        <h3>{data.category}</h3>
+        <h2>{data.category}</h2>
+        <h3 className={styles.marginTop}>{data.name}</h3>
+        <p className={styles.detail}>{data.description}</p>
         <h4>{data.price} €</h4>
       </div>
     </div>

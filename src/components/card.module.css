@@ -8,39 +8,48 @@
   border-bottom-right-radius: 15px;
 
   line-height: 1.2em;
-  color:white;
-  height:100%;
-  border-color:white;
+  color: black;
+  height: 100%;
+  border-color: rgb(68, 68, 68);
   border-width: 1px;
 }
 
-.card:hover{
-  border-color:white;
-  border-width: 2px;
+.card:hover {
+  border-color: rgb(55, 166, 43);
+  -webkit-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
 }
 
 .description {
-  background-color: rgba(0, 0, 0, 0.926);
-  padding: 40px;
+  background-color: white;
+  padding: 20px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   line-height: 1.5em;
-  
 }
 .description h5 {
   margin-top: 10px;
 }
 
-.description h2{
+.description h2 {
   font-size: 1.4em;
 }
 
-.image{
+.image {
   height: 100%;
 }
 
-.imageContainer{
-  height: 300px ;
+.imageContainer {
+  height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.detail {
+  margin-top: 15px;
+}
+
+.marginTop {
+  margin-top: 5px;
 }
