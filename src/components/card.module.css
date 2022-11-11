@@ -9,19 +9,22 @@
 
   line-height: 1.2em;
   color: black;
-  height: 100%;
   border-color: rgb(68, 68, 68);
   border-width: 1px;
 }
 
-.card:hover {
+/* .card:hover {
   border-color: rgb(55, 166, 43);
   -webkit-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 52px -15px rgba(0, 0, 0, 0.75);
-}
+} */
 
 .description {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   padding: 20px;
   border-bottom-left-radius: 15px;
@@ -48,8 +51,22 @@
 
 .detail {
   margin-top: 15px;
+  max-height:150px;
+  overflow: hidden;
 }
 
 .marginTop {
   margin-top: 5px;
+}
+
+.priceCart {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.icon:hover {
+  color: grey;
 }

@@ -1,7 +1,7 @@
-
-import React, { useContext} from 'react';
+import React, { useContext } from "react";
 import { GlobalDispachContext } from "../context/GlobalContextProvider";
 import * as styles from "./card.module.css";
+import { BsFillCartPlusFill } from "react-icons/bs";
 
 export default function Card(props) {
   const dispach = useContext(GlobalDispachContext);
@@ -13,19 +13,29 @@ export default function Card(props) {
   };
   return (
     <div
-      className={styles.card}
-      onClick={cardClicked}
-      onKeyDown={cardClicked}
-      role="presentation"
-    >
-      <div className={styles.imageContainer} style={{backgroundImage:"url('"+ data.image +"')", backgroundSize:"cover"}}>
-        
-      </div>
+      className={styles.card}>
+      <div
+        className={styles.imageContainer}
+        style={{
+          backgroundImage: "url('" + data.image + "')",
+          backgroundSize: "cover",
+        }}
+      ></div>
       <div className={styles.description}>
-        <h2>{data.category}</h2>
-        <h3 className={styles.marginTop}>{data.name}</h3>
-        <p className={styles.detail}>{data.description}</p>
-        <h4>{data.price} €</h4>
+        <div className={styles.info}>
+          <h2>{data.category}</h2>
+          <h3 className={styles.marginTop}>{data.name}</h3>
+          <p className={styles.detail}>{data.description}</p>
+        </div>
+        <div className={styles.priceCart}>
+          <div>{data.price} €</div>
+          <div className={styles.icon} onClick={cardClicked}>
+            <BsFillCartPlusFill
+              onMouseOver={({ target }) => (target.style.color = "grey")}
+              onMouseOut={({ target }) => (target.style.color = "black")}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

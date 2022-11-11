@@ -39,9 +39,6 @@ export default function Products({ data }) {
             return <Card data={product} key={id} />;
           })}
         </div>
-        <div className={styles.list}>
-          <CartList/> 
-        </div>
       </div>
     </Layout>
   );
